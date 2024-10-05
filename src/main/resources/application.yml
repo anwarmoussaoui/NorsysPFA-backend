@@ -1,0 +1,30 @@
+# Database config
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/anwa?useSSL=false
+    username: root
+    password:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+springdoc:
+  api-docs:
+    path: /educogest-api-docs
+  swagger-ui:
+    filter: true
+    path: /educogest-documentation
+    tryItOutEnabled: true
+
+# App Properties
+educ:
+  app:
+    jwtSecret: 949wp2NmyUtgZ7uFG4NxeCzgjkmN33cGvFKWvtTgUUPSOfdYSPYcfTYQ9Mh8FFznfz23rdexj5XjEvEyc73Tjg
+    jwtExpirationMs: 86400000
+  openapi:
+    dev-url: http://127.0.0.1:8080
+    prod-url: https://prod-educogest-api.com
